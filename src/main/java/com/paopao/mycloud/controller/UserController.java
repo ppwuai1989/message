@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.paopao.mycloud.entity.User;
 import com.paopao.mycloud.service.UserService;
 
 @RestController
@@ -22,5 +23,9 @@ public class UserController extends BaseController {
 		return "this is a test api";
 	}
 
+	@RequestMapping(value = { "addMessage" })
+	public Object addMessage(User user) {
+		return userService.addMessage(user);
+	}
 
 }

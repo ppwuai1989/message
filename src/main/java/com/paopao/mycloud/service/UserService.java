@@ -1,6 +1,8 @@
 package com.paopao.mycloud.service;
 
-public interface UserService {
+import com.paopao.mycloud.entity.User;
 
+public interface UserService {
+    int addMessage(User user);
 	
 }
